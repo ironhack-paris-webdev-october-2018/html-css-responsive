@@ -1,0 +1,82 @@
+/*
+ * Default CSS (global & small screens)
+ * ------------------------------------
+ */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+a {
+  color: tomato;
+}
+
+article {
+  border: 2px solid #333;
+}
+
+aside {
+  background-color: #333;
+  color: white;
+}
+
+nav {
+  display: none;
+}
+
+/*
+ * CSS rules for MEDIUM size (768px and above)
+ */
+@media (min-width: 768px) {
+  nav {
+    display: block;
+  }
+
+  nav a {
+    margin-right: 20px;
+  }
+
+  header,
+  section {
+    display: flex;
+  }
+
+  article,
+  aside {
+    box-sizing: border-box;
+  }
+
+  article {
+    width: 75%;
+  }
+
+  aside {
+    width: 25%;
+  }
+}
+
+/*
+ * CSS rules for LARGE size (1200px and above)
+ */
+@media (min-width: 1200px) {
+  body {
+    background-image: url(../images/background.jpeg);
+    background-size: cover;
+  }
+
+  header {
+    /* transparent background (text won't be transparent) */
+    background-color: rgba(255, 255, 255, 0.6);
+    justify-content: space-between;
+  }
+
+  section {
+    justify-content: space-around;
+  }
+
+  article {
+    /* transparent background (text won't be transparent) */
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+  }
+}
